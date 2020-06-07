@@ -1,13 +1,16 @@
 def convert(number):
-    result = ''
-    if number % 3 == 0 or number % 5 == 0 or number % 7 == 0:
-        if number % 3 == 0:
-            result += 'Pling'
-        if number % 5 == 0:
-            result += 'Plang'
-        if number % 7 == 0:
-            result += 'Plong'
-    else:
-        result += str(number)
+    sounds = []
 
-    return result
+    if number % 3 == 0:
+        sounds.append('Pling')
+
+    if number % 5 == 0:
+        sounds.append('Plang')
+
+    if number % 7 == 0:
+        sounds.append('Plong')
+
+    if not sounds:
+        return str(number)
+
+    return ''.join(sounds)
