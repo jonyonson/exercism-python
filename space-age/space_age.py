@@ -4,8 +4,8 @@ class SpaceAge:
         self.seconds = seconds
         self.seconds_in_year = 31557600
 
-    def __format_years(self, blah):
-        years = self.seconds / (self.seconds_in_year * blah)
+    def __format_years(self, orbit_earth_years):
+        years = self.seconds / (self.seconds_in_year * orbit_earth_years)
         formatted_year = f'{years:.2f}'
         return float(formatted_year)
 
